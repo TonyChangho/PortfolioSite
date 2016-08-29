@@ -15,9 +15,12 @@
                 box-sizing: border-box;
             }
 
-            body {
-                font-size: 12px;
+            html, body {
                 height: 100%;
+            }
+
+            html {
+                font-size: 12px;
             }
 
             header, footer {
@@ -50,17 +53,31 @@
                 width: 100%;
             }
 
-            #sites {
-                background-color: yellow;
+            section {
                 height: 100%;
-                position: relative;
+                width: 100%;
             }
 
-            #sites .mdl-card {
+            #sites {
+                background-color: yellow;
+            }
+
+            #sites ul {
+                display: flex;
+                height: 100%;
+                width: 100%;
+            }
+
+            #sites .site {
+                background-color: red;
+                box-shadow: 4px 6px 12px -1px #333;
                 height: 86%;
+                margin: auto;
+/*
                 left: 7%;
                 position: absolute;
                 top: 7%;
+*/
                 width: 86%;
             }
         </style>
@@ -71,14 +88,16 @@
         </header>
 
         <div class="content">
-            <div id="sites">
-                <section class="mdl-card mdl-shadow--8dp">
-                    <div class="mdl-card__title" style="background: url(images/angel1.jpg) center / cover">
-                        <h2 class="mdl-card__title-text">Angelsoft</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">stuff here</div>
-                </section>
-            </div>
+            <section id="sites">
+                <ul>
+                    <li class="site mdl-card mdl-shadow--8dp">
+                        <div class="mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
+                            <h2 class="mdl-card__title-text">Angelsoft</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">stuff here</div>
+                    </li>
+                </ul>
+            </section>
         </div>
         
         <footer>
