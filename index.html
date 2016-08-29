@@ -7,12 +7,74 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
         <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+
+        <style type="text/css">
+            body {
+                font-size: 12px;
+                height: 100%;
+            }
+
+            header, footer {
+                height: 6em;
+                left: 0;
+                position: fixed;
+                width: 100%;
+                z-index: 5;
+            }
+
+            header {
+                background-color: orange;
+                top: 0;
+            }
+
+            footer {
+                background-color: indigo;
+                bottom: 0;
+            }
+
+            h1 {
+                font-size: 2em;
+                line-height: 1em;
+            }
+
+            .content {
+                background-color: green;
+                height: 100%;
+                padding: 6em 0;
+                width: 100%;
+            }
+
+            #sites {
+                background-color: yellow;
+                height: calc(100% - 144px);
+                position: relative;
+            }
+
+            #sites .mdl-card {
+                height: 90%;
+                left: 10%;
+                position: absolute;
+                top: 5%;
+                width: 80%;
+            }
+        </style>
     </head>
     <body>
-        <header>Tony Changho</header>
+        <header>
+            <h1>Tony Changho</h1>
+        </header>
+
+        <div class="content">
+            <div id="sites">
+                <section class="mdl-card mdl-shadow--8dp">
+                    <div class="mdl-card--border">Putting some</div>
+                    <div class="mdl-card__actions mdl-card--border">stuff here</div>
+                </section>
+            </div>
+        </div>
         
-        <section class="mdl-card mdl-shadow--2dp">
-            Putting some stuff here            
-        </section>
+        <footer>
+            Footer
+        </footer>
     </body>
 </html>
