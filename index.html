@@ -9,6 +9,10 @@
         <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
 
         <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+
             body {
                 font-size: 12px;
                 height: 100%;
@@ -46,16 +50,16 @@
 
             #sites {
                 background-color: yellow;
-                height: calc(100% - 144px);
+                height: 100%;
                 position: relative;
             }
 
             #sites .mdl-card {
-                height: 90%;
-                left: 10%;
+                height: 86%;
+                left: 7%;
                 position: absolute;
-                top: 5%;
-                width: 80%;
+                top: 7%;
+                width: 86%;
             }
         </style>
     </head>
@@ -67,8 +71,10 @@
         <div class="content">
             <div id="sites">
                 <section class="mdl-card mdl-shadow--8dp">
-                    <div class="mdl-card--border">Putting some</div>
-                    <div class="mdl-card__actions mdl-card--border">stuff here</div>
+                    <div class="mdl-card__title" style="background: url(images/angel1.jpg) center / cover">
+                        <h2 class="mdl-card__title-text">Angelsoft</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">stuff here</div>
                 </section>
             </div>
         </div>
