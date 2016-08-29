@@ -57,7 +57,7 @@
 
             section {
                 height: 100%;
-                width: 100%;
+/*                width: 100%;*/
             }
 
             #sites {
@@ -71,7 +71,7 @@
 /*                justify-content: space-around;*/
                 overflow-x: auto;
                 overflow-y: hidden;
-                width: 100%;
+/*                width: 100%;*/
             }
 
             #sites .site {
@@ -87,6 +87,16 @@
 */
                 width: 50%;
             }
+
+            #sites .site .title {
+                height: 70%;
+            }
+
+            #sites .site aside {
+                background-color: gray;
+                height: 30%;
+/*                width: 100%;*/
+            }
         </style>
     </head>
     <body>
@@ -98,22 +108,22 @@
             <section id="sites">
                 <ul>
                     <li class="site mdl-card mdl-shadow--8dp">
-                        <div class="mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
+                        <div class="title mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
                             <h2 class="mdl-card__title-text">Angelsoft</h2>
                         </div>
-                        <div class="mdl-card__supporting-text">stuff here</div>
+                        <aside class="mdl-card__supporting-text">stuff here</aside>
                     </li>
                     <li class="site mdl-card mdl-shadow--8dp">
-                        <div class="mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
+                        <div class="title mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
                             <h2 class="mdl-card__title-text">Angelsoft</h2>
                         </div>
-                        <div class="mdl-card__supporting-text">stuff here</div>
+                        <aside class="mdl-card__supporting-text">stuff here</aside>
                     </li>
                     <li class="site mdl-card mdl-shadow--8dp">
-                        <div class="mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
+                        <div class="title mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
                             <h2 class="mdl-card__title-text">Angelsoft</h2>
                         </div>
-                        <div class="mdl-card__supporting-text">stuff here</div>
+                        <aside class="mdl-card__supporting-text">stuff here</aside>
                     </li>
                 </ul>
             </section>
