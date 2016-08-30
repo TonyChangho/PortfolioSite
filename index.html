@@ -23,6 +23,7 @@
 
             html {
                 font-size: 12px;
+                min-width: 320px;
             }
 
             body {
@@ -103,6 +104,34 @@
             }
             footer {
                 order: 3;
+            }
+
+            @media (max-aspect-ratio: 5/6) {
+                #sites ul {
+                    flex-wrap: wrap;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+
+                #sites .site {
+                    flex-basis: 80%;
+                    height: 80%;
+                    margin: 5% auto;
+                }
+            }
+
+            @media (min-aspect-ratio: 5/6) and (max-aspect-ratio: 4/3) {
+                #sites ul {
+                    flex-wrap: nowrap;
+                    /*overflow-x: inherit;
+                    overflow-y: inherit;*/
+                }
+
+                #sites .site {
+                    flex-basis: 50%;
+                    height: 86%;
+                    margin: auto 5%;
+                }
             }
 
         </style>
