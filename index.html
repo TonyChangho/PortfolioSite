@@ -25,11 +25,20 @@
                 font-size: 12px;
             }
 
+            body {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            body * {
+                flex: 1 100%;
+            }
+
             header, footer {
                 height: 6em;
                 left: 0;
-                position: fixed;
-                width: 100%;
+/*                position: fixed;*/
+/*                width: 100%;*/
                 z-index: 5;
             }
 
@@ -50,9 +59,9 @@
 
             .content {
                 background-color: green;
-                height: 100%;
-                padding: 6em 0;
-                width: 100%;
+                height: calc(100% - 12em);
+/*                padding: 6em 0;*/
+/*                width: 100%;*/
             }
 
             section {
@@ -79,16 +88,17 @@
                 box-shadow: 4px 6px 12px -1px #333;
                 flex-shrink: 0;
                 height: 86%;
-                margin: auto 3rem;
+                margin: auto 3%;
 /*
                 left: 7%;
                 position: absolute;
                 top: 7%;
 */
-                width: 50%;
+                flex-basis: 50%;
             }
 
             #sites .site .title {
+                background: 0 0 / cover;
                 height: 70%;
             }
 
@@ -97,6 +107,17 @@
                 height: 30%;
 /*                width: 100%;*/
             }
+
+            header {
+                order: 1;
+            }
+            .content{
+                order: 2;
+            }
+            footer {
+                order: 3;
+            }
+
         </style>
     </head>
     <body>
@@ -108,19 +129,19 @@
             <section id="sites">
                 <ul>
                     <li class="site mdl-card mdl-shadow--8dp">
-                        <div class="title mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
+                        <div class="title mdl-card__title" style="background-image: url(images/angel1.jpg);">
                             <h2 class="mdl-card__title-text">Angelsoft</h2>
                         </div>
                         <aside class="mdl-card__supporting-text">stuff here</aside>
                     </li>
                     <li class="site mdl-card mdl-shadow--8dp">
-                        <div class="title mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
+                        <div class="title mdl-card__title" style="background-image: url(images/angel1.jpg);">
                             <h2 class="mdl-card__title-text">Angelsoft</h2>
                         </div>
                         <aside class="mdl-card__supporting-text">stuff here</aside>
                     </li>
                     <li class="site mdl-card mdl-shadow--8dp">
-                        <div class="title mdl-card__title" style="background: url(images/angel1.jpg) center / cover;">
+                        <div class="title mdl-card__title" style="background-image: url(images/angel1.jpg);">
                             <h2 class="mdl-card__title-text">Angelsoft</h2>
                         </div>
                         <aside class="mdl-card__supporting-text">stuff here</aside>
