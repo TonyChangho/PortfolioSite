@@ -3,7 +3,7 @@
 }
 
 body {
-    /*background-color: lightsteelblue;*/
+    background-color: lightsteelblue;
     font-size: 16px;
 }
 
@@ -20,11 +20,21 @@ body {
     color: #333;
     font-family: 'Roboto', sans-serif;
     margin: auto;
+    padding-bottom: 2em;
     width: 600px;
 }
 
 #main > * {
-    border-bottom: 1px solid blue;
+    /*border-bottom: 1px solid blue;*/
+}
+
+h1 {
+    color: white;
+    font-size: 5em;
+    letter-spacing: -0.0625em;
+    text-align: center;
+    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.4);
 }
 
 #content > section {
@@ -61,4 +71,18 @@ cite {
     font-style: italic;
     margin: 0.75em auto 1.5em auto;
     text-align: right;
+}
+
+@media (max-width: 617px) {
+    #main {
+        width: calc(100% - 1em);
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    #content > section {
+        /*box-shadow: none;*/
+    }
 }
