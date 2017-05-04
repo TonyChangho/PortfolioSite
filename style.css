@@ -57,6 +57,10 @@ h2 {
     /*     font-weight: bold; */
 }
 
+#testimonials li {
+    margin-bottom: 1.5em;
+}
+
 blockquote {
     background-color: #eee;
     padding: 1em;
@@ -69,8 +73,45 @@ blockquote p {
 cite {
     display: block;
     font-style: italic;
-    margin: 0.75em auto 1.5em auto;
+    margin-top: 0.75em;
     text-align: right;
+}
+
+#sites > ul > li {
+    background-color: #eee;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1.5em;
+    padding: 1em;
+}
+
+#sites > ul > li > * {
+    /*flex: 1 auto;*/
+}
+
+#sites > ul > li img {
+    flex-basis: 33%;
+    height: 100%;
+    width: 42%;
+}
+
+#sites > ul > li aside {
+    flex-basis: 58%;
+    margin-left: 0.8em;
+}
+
+h3 {
+    font-size: 1.33em;
+    margin-bottom: 0.33em;
+}
+
+#sites aside ul {
+    list-style: circle;
+    margin-left: 1.25em;
+}
+
+#sites aside li {
+    margin-bottom: 0.25em;
 }
 
 @media (max-width: 617px) {

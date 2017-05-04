@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    word-spacing: -1ch;
+}
+
+h1, h2 {
+    text-shadow: none;
+    text-transform: lowercase;
+}
+
+h1:before, h2:before {
+    content: '<';
+}
+
+h1:after, h2:after {
+    content: '>';
+}
+
+#main {
+    color: lawngreen;
+    font-family: monospace;
+}
+
+#content > section {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+blockquote {
+    background-color: blue;
+    border: 0.0625em dashed white;
+    color: white;
+}
+
+blockquote {
+    background-color: blue;
+    border: 0.0625em dashed white;
+    color: white;
+}
