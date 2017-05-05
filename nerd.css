@@ -27,16 +27,45 @@ h1:after, h2:after {
 #content > section {
     background-color: transparent;
     box-shadow: none;
+    padding-bottom: 0;
+}
+
+#content > section:before {
+    color: white;
+    content: '================================================================================';
+    display: block;
+    margin-bottom: 1.25em;
+    overflow: hidden;
+    text-align: center;
 }
 
 blockquote {
     background-color: blue;
-    border: 0.0625em dashed white;
+    border: 0.25em double white;
     color: white;
 }
 
-blockquote {
-    background-color: blue;
-    border: 0.0625em dashed white;
+#sites > ul > li {
+    background-color: red;
+    border: 0.125em dotted white;
     color: white;
 }
+
+#sites .screenshot {
+    border: 0.125em solid white;
+}
+
+#sites aside ul {
+    list-style-type: none;
+    margin-left: auto;
+}
+
+#sites aside li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+#sites aside li:before {
+    content: '♠ ';
+}
+

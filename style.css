@@ -32,6 +32,7 @@ h1 {
     color: white;
     font-size: 5em;
     letter-spacing: -0.0625em;
+    margin-top: 0.25em;
     text-align: center;
     /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
     text-shadow: 2px 3px 4px rgba(0,0,0,0.4);
@@ -79,8 +80,8 @@ cite {
 
 #sites > ul > li {
     background-color: #eee;
-    display: flex;
-    flex-flow: row nowrap;
+    /*display: flex;*/
+    /*flex-flow: row nowrap;*/
     margin-bottom: 1.5em;
     padding: 1em;
 }
@@ -89,24 +90,32 @@ cite {
     /*flex: 1 auto;*/
 }
 
+#sites .screenshot {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    text-align: center;
+    width: 100%;
+}
+
 #sites > ul > li img {
-    flex-basis: 33%;
-    height: 100%;
-    width: 42%;
+    /*flex-basis: 33%;*/
+    /*height: 295px;*/
+    width: 100%;
 }
 
 #sites > ul > li aside {
-    flex-basis: 58%;
-    margin-left: 0.8em;
+    /*flex-basis: 58%;*/
+    /*margin-left: 0.8em;*/
 }
 
 h3 {
     font-size: 1.33em;
-    margin-bottom: 0.33em;
+    margin: 0.5em auto;
 }
 
 #sites aside ul {
-    list-style: circle;
+    list-style-type: disc;
     margin-left: 1.25em;
 }
 
