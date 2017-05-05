@@ -2,8 +2,31 @@ body {
     background-color: black;
 }
 
+header {
+    text-align: center;
+}
+
 h1 {
+    display: inline-block;
+    font-size: 4.75em;
     word-spacing: -1ch;
+}
+
+@keyframes cursor-blink {
+    from {
+        color: rgb(255, 255, 255);
+    }
+    to {
+        color: rgb(0, 0, 0);
+    }
+}
+
+h1:after {
+    /*animation: cursor-blink 1s step-end 1s infinite forwards;*/
+    animation: cursor-blink 1s infinite;
+    content: "‐";
+    /*transition: color 1s;*/
+    vertical-align: sub;
 }
 
 h1, h2 {
@@ -11,32 +34,37 @@ h1, h2 {
     text-transform: lowercase;
 }
 
-h1:before, h2:before {
-    content: '<';
+h1 .name:before, h2:before {
+    content: "<";
 }
 
-h1:after, h2:after {
-    content: '>';
+h1 .name:after, h2:after {
+    content: ">";
 }
 
 #main {
     color: lawngreen;
-    font-family: monospace;
+    font-family: "Droid Sans Mono", monospace;
 }
 
 #content > section {
     background-color: transparent;
     box-shadow: none;
+    margin: auto;
     padding-bottom: 0;
 }
 
 #content > section:before {
     color: white;
-    content: '================================================================================';
+    content: "================================================================================";
     display: block;
     margin-bottom: 1.25em;
     overflow: hidden;
     text-align: center;
+}
+
+h2 {
+    margin-bottom: 0.75em;
 }
 
 blockquote {
@@ -52,6 +80,10 @@ blockquote {
 }
 
 #sites .screenshot {
+    /*border: 0.125em solid white;*/
+}
+
+#sites .screenshot img {
     border: 0.125em solid white;
 }
 
@@ -61,11 +93,16 @@ blockquote {
 }
 
 #sites aside li {
-    padding-left: 1em;
-    text-indent: -1em;
+    padding-left: 2ch;
+    text-indent: -2ch;
 }
 
 #sites aside li:before {
-    content: '♠ ';
+    content: "◊ ";
 }
 
+@media (max-width: 617px) {
+    h1 {
+        font-size: 3.125em;
+    }
+}

@@ -24,10 +24,6 @@ body {
     width: 600px;
 }
 
-#main > * {
-    /*border-bottom: 1px solid blue;*/
-}
-
 h1 {
     color: white;
     font-size: 5em;
@@ -56,6 +52,10 @@ h2 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
     /*     font-weight: bold; */
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 #testimonials li {
@@ -91,8 +91,10 @@ cite {
 }
 
 #sites .screenshot {
+    box-sizing: content-box;
     height: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    margin-bottom: 1em;
     padding-bottom: 56.25%;
     text-align: center;
     width: 100%;
