@@ -101,8 +101,26 @@ blockquote {
     content: "◊ ";
 }
 
+footer {
+    border-top: 0.0625em dashed rgb(255, 255, 255);
+    padding: 1em;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li {
+    /*flex: 1 0 content;*/
+}
+
+footer ul a {
+    color: rgb(255, 255, 255);
+}
+
 @media (max-width: 617px) {
     h1 {
-        font-size: 3.125em;
+        font-size: 3em;
     }
 }
