@@ -166,6 +166,12 @@ footer ul a {
 
 /* Breakpoints */
 
+@media (max-width: 599px) {
+    #main {
+        width: 100%;
+    }
+}
+
 @media (min-width: 460px) and (max-width: 599px) {
     h1 {
         font-size: 3.375em;
