@@ -34,18 +34,13 @@ h1 {
 }
 
 @keyframes cursor-blink {
-    from {
-        color: rgb(255, 255, 255);
-    }
-    to {
+    50% {
         color: rgb(0, 0, 0);
     }
 }
 
 h1:after {
-    /*animation: cursor-blink 1s step-end 1s infinite forwards;*/
-    /*animation: cursor-blink 1s infinite;*/
-    animation: cursor-blink 0.333s steps(2, end) infinite;
+    animation: cursor-blink 0.333s step-end infinite;
     content: "-";
     vertical-align: sub;
 }
