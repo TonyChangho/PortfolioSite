@@ -8,7 +8,7 @@ header {
 
 h1 {
     display: inline-block;
-    font-size: 4.75em;
+    font-size: 4.375em;
     word-spacing: -1ch;
 }
 
@@ -23,8 +23,9 @@ h1 {
 
 h1:after {
     /*animation: cursor-blink 1s step-end 1s infinite forwards;*/
-    animation: cursor-blink 1s infinite;
-    content: "‐";
+    animation: cursor-blink 0.333s steps(2, end) infinite;
+    /*animation: cursor-blink 1s infinite;*/
+    content: "-";
     /*transition: color 1s;*/
     vertical-align: sub;
 }
@@ -43,7 +44,7 @@ h1 .name:after, h2:after {
 }
 
 #main {
-    color: lawngreen;
+    color: rgb(124, 252, 0);
     font-family: "Droid Sans Mono", monospace;
 }
 
@@ -55,7 +56,7 @@ h1 .name:after, h2:after {
 }
 
 #content > section:before {
-    color: white;
+    color: rgb(255, 255, 255);
     content: "================================================================================";
     display: block;
     margin-bottom: 1.25em;
@@ -69,14 +70,19 @@ h2 {
 
 blockquote {
     background-color: blue;
-    border: 0.25em double white;
-    color: white;
+    border: 0.25em double rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+blockquote p {
+    margin: 0.75em;
 }
 
 #sites > ul > li {
-    background-color: red;
-    border: 0.125em dotted white;
+    background-color: rgb(255, 0, 0);
+    border: 0.125em dotted rgb(255, 255, 255);
     color: white;
+    padding: 1.25em;
 }
 
 #sites .screenshot {
@@ -84,7 +90,7 @@ blockquote {
 }
 
 #sites .screenshot img {
-    border: 0.125em solid white;
+    border: 0.125em solid rgb(255, 255, 255);
 }
 
 #sites aside ul {
@@ -108,19 +114,33 @@ footer {
 
 footer ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 footer ul li {
     /*flex: 1 0 content;*/
+    padding: 0.375em 1em;
 }
 
 footer ul a {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 0);
 }
 
-@media (max-width: 617px) {
+@media (min-width: 460px) and (max-width: 617px) {
     h1 {
-        font-size: 3em;
+        font-size: 3.375em;
+    }
+}
+
+@media (max-width: 459px) {
+    h1 {
+        font-size: 2.875em;
+    }
+}
+
+@media (max-width: 364px) {
+    footer ul {
+        justify-content: space-between;
     }
 }

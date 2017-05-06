@@ -3,12 +3,12 @@
 }
 
 body {
-    background-color: lightsteelblue;
+    background-color: rgb(176, 196, 222);
     font-size: 16px;
 }
 
 #body-bg {
-    background: url(images/abstract_white_background_by_taufiknurs-d6a9czb.jpg) 0 0 / cover fixed lightgray;
+    background: url(images/abstract_white_background_by_taufiknurs-d6a9czb.jpg) 0 0 / cover fixed rgb(211, 211, 211);
     filter: blur(3px);
     height: 100%;
     position: fixed;
@@ -17,7 +17,7 @@ body {
 }
 
 #main {
-    color: #333;
+    color: rgb(51, 51, 51);
     font-family: 'Roboto', sans-serif;
     margin: auto;
     padding-bottom: 2em;
@@ -35,7 +35,7 @@ h1 {
 }
 
 #content > section {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     /*border-radius: 0.333em;*/
     /*box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);*/
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
@@ -63,12 +63,12 @@ p {
 }
 
 blockquote {
-    background-color: #eee;
+    background-color: rgb(238, 238, 238);
     padding: 1em;
 }
 
 blockquote p {
-    margin: 0.75em;
+    margin: 0.75em 0.25em;
 }
 
 cite {
@@ -79,7 +79,7 @@ cite {
 }
 
 #sites > ul > li {
-    background-color: #eee;
+    background-color: rgb(238, 238, 238);
     /*display: flex;*/
     /*flex-flow: row nowrap;*/
     margin-bottom: 1.5em;
@@ -127,6 +127,7 @@ h3 {
 
 @media (max-width: 617px) {
     #main {
+        min-width: 288px;
         width: calc(100% - 1em);
     }
 
