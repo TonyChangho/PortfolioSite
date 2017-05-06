@@ -125,7 +125,7 @@ h3 {
     margin-bottom: 0.25em;
 }
 
-@media (max-width: 617px) {
+@media (max-width: 599px) {
     #main {
         min-width: 288px;
         width: calc(100% - 1em);

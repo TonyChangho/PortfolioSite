@@ -2,6 +2,10 @@ body {
     background-color: black;
 }
 
+#main {
+    padding: 0 1.25em;
+}
+
 header {
     text-align: center;
 }
@@ -51,8 +55,8 @@ h1 .name:after, h2:after {
 #content > section {
     background-color: transparent;
     box-shadow: none;
-    margin: auto;
-    padding-bottom: 0;
+    margin: 2.25em auto;
+    padding: 0;
 }
 
 #content > section:before {
@@ -62,6 +66,10 @@ h1 .name:after, h2:after {
     margin-bottom: 1.25em;
     overflow: hidden;
     text-align: center;
+}
+
+#content > section:first-child {
+    margin-top: 1.25em;
 }
 
 h2 {
@@ -127,7 +135,13 @@ footer ul a {
     color: rgb(255, 255, 0);
 }
 
-@media (min-width: 460px) and (max-width: 617px) {
+@media (max-width: 599px) {
+    #main {
+        width: 100%;
+    }
+}
+
+@media (min-width: 460px) and (max-width: 599px) {
     h1 {
         font-size: 3.375em;
     }
@@ -139,7 +153,19 @@ footer ul a {
     }
 }
 
-@media (max-width: 364px) {
+@media (max-width: 389px) {
+    #main {
+        padding: 0 0.875em;
+    }
+    h1 {
+        font-size: 2.375em;
+    }
+    #content, footer {
+        font-size: 0.8125em;
+    }
+}
+
+@media (max-width: 311px) {
     footer ul {
         justify-content: space-between;
     }
