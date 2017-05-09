@@ -3,6 +3,9 @@ $main-text-color: rgb(255, 255, 255);
 $accent-text-color: rgb(124, 252, 0);
 $link-color: rgb(255, 255, 0);
 
+$large-break: 619px;
+$medium-break: 459px;
+$small-break: 389px;
 $small-break-font-size: 0.8125em;
 
 $pre-heading-content: "<";
@@ -41,11 +44,11 @@ body {
     padding: 0 1.25em;
     width: 600px;
 
-    @media (max-width: 619px) {
+    @media (max-width: $large-break) {
         width: 100%;
     }
 
-    @media (max-width: 389px) {
+    @media (max-width: $small-break) {
         padding: 0 0.875em;
     }
 
@@ -81,15 +84,15 @@ body {
             text-align: center;
             word-spacing: -1ch;
 
-            @media (min-width: 460px) and (max-width: 619px) {
+            @media (max-width: $large-break) {
                 font-size: 3.25em;
             }
 
-            @media (max-width: 459px) {
+            @media (max-width: $medium-break) {
                 font-size: 2.75em;
             }
 
-            @media (max-width: 389px) {
+            @media (max-width: $small-break) {
                 font-size: 2.375em;
             }
 
@@ -101,7 +104,7 @@ body {
     }
 
     #content {
-        @media (max-width: 389px) {
+        @media (max-width: $small-break) {
             font-size: $small-break-font-size;
         }
 
@@ -198,9 +201,9 @@ body {
 
     footer {
         border-top: 0.0625em dashed rgb(255, 255, 255);
-        padding: 1.125em;
+        padding: 1em 0.75em;
 
-        @media (max-width: 389px) {
+        @media (max-width: $small-break) {
             font-size: $small-break-font-size;
         }
 
@@ -210,7 +213,7 @@ body {
             flex-wrap: wrap;
             justify-content: space-around;
 
-            @media (max-width: 329px) {
+            @media (max-width: 321px) {
                 justify-content: space-between;
             }
 
