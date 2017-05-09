@@ -41,7 +41,7 @@ body {
     padding: 0 1.25em;
     width: 600px;
 
-    @media (max-width: 599px) {
+    @media (max-width: 619px) {
         width: 100%;
     }
 
@@ -81,7 +81,7 @@ body {
             text-align: center;
             word-spacing: -1ch;
 
-            @media (min-width: 460px) and (max-width: 599px) {
+            @media (min-width: 460px) and (max-width: 619px) {
                 font-size: 3.25em;
             }
 
