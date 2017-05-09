@@ -201,7 +201,7 @@ body {
 
     footer {
         border-top: 0.0625em dashed rgb(255, 255, 255);
-        padding: 1em 0.75em;
+        padding: 1em 0.5em;
 
         @media (max-width: $small-break) {
             font-size: $small-break-font-size;
@@ -213,7 +213,7 @@ body {
             flex-wrap: wrap;
             justify-content: space-around;
 
-            @media (max-width: 321px) {
+            @media (max-width: 315px) {
                 justify-content: space-between;
             }
 
