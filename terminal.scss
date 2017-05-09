@@ -1,0 +1,220 @@
+/* Variables */
+$main-text-color: rgb(255, 255, 255);
+$accent-text-color: rgb(124, 252, 0);
+$link-color: rgb(255, 255, 0);
+
+$pre-heading-content: "<";
+$post-heading-content: ">";
+
+
+/* Animations */
+@keyframes cursor-blink {
+    50% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-size: 16px;
+}
+
+/* Main content*/
+
+#main {
+    color: $main-text-color;
+    font-family: "Droid Sans Mono", monospace;
+    margin: auto;
+    padding: 0 1.25em;
+    width: 600px;
+
+    @media (max-width: 599px) {
+        width: 100%;
+    }
+
+    @media (max-width: 389px) {
+        padding: 0 0.875em;
+    }
+
+    @media (max-width: 311px) {
+        min-width: 288px;
+    }
+
+
+    p {
+        margin: 0.75em auto;
+    }
+
+    h1, h2 {
+        text-transform: lowercase;
+    }
+
+    h1 .name:before, h2:before {
+        content: $pre-heading-content;
+    }
+
+    h1 .name:after, h2:after {
+        content: $post-heading-content;
+    }
+
+    header {
+        text-align: center;
+
+        h1 {
+            display: inline-block;
+            font-size: 4.375em;
+            letter-spacing: -0.0625em;
+            margin-top: 0.25em;
+            text-align: center;
+            word-spacing: -1ch;
+
+            @media (min-width: 460px) and (max-width: 599px) {
+                font-size: 3.375em;
+            }
+
+            @media (max-width: 459px) {
+                font-size: 2.875em;
+            }
+
+            @media (max-width: 389px) {
+                font-size: 2.375em;
+            }
+
+
+            &:after {
+                animation: cursor-blink 0.333s step-end infinite;
+                content: "-";
+                vertical-align: sub;
+            }
+        }
+    }
+
+    #content section {
+        margin: 2.25em auto;
+
+        &:before {
+            content: "================================================================================";
+            display: block;
+            margin-bottom: 1.25em;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        &:first-child {
+            margin-top: 1.25em;
+        }
+
+        h2 {
+            color: $accent-text-color;
+            font-size: 1.5em;
+            margin-bottom: 0.75em;
+        }
+
+        &#about p {
+            color: $accent-text-color;
+        }
+
+        &#testimonials li {
+            margin-bottom: 1.75em;
+
+            blockquote {
+                background-color: rgb(0, 0, 255);
+                border: 0.25em double rgb(255, 255, 255);
+                padding: 1em 1.75em;
+            }
+
+            cite {
+                color: $accent-text-color;
+                display: block;
+                font-style: italic;
+                margin-top: 0.75em;
+                text-align: right;
+            }
+        }
+
+        &#sites {
+            > ul > li {
+                background-color: rgb(255, 0, 0);
+                border: 0.125em dotted rgb(255, 255, 255);
+                color: white;
+                margin-bottom: 1.5em;
+                padding: 1.25em;
+            }
+
+            .screenshot {
+                box-sizing: content-box;
+                height: 0;
+                margin-bottom: 1em;
+                padding-bottom: 56.25%;
+                text-align: center;
+                width: 100%;
+
+                img {
+                    border: 0.125em solid rgb(255, 255, 255);
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                font-size: 1.33em;
+                margin: 0.5em auto;
+            }
+
+            aside {
+                ul {
+                    /* Nothing here because that's the point. :) See next few rules. */
+                }
+
+                li {
+                    margin-bottom: 0.75em;
+                    padding-left: 2ch;
+                    text-indent: -2ch;
+
+                    &:before {
+                        content: "\25CA\A0";
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        border-top: 0.0625em dashed rgb(255, 255, 255);
+        padding: 1.125em;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            @media (max-width: 329px) {
+                justify-content: space-between;
+            }
+
+
+            li {
+                padding: 0.375em 1em;
+
+                a {
+                    color: $link-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Breakpoints */
+
+@media (max-width: 389px) {
+    #content, footer {
+        font-size: 0.8125em;
+    }
+}
+
